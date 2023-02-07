@@ -1,0 +1,58 @@
+1. Logowanie do aplikacji z urzyciem firebase - pomyśleć gdzie przechowywać dane o stanie konta itd 
+
+2. Aplikacja wyświetla najpopularnijesze krypto bez logowania, jak chce sie kupić to trzeba sie zalogowac 
+
+3. Component read more albo cos takiego gdzie pokazuje sie wykres i wiecej info 
+
+4. najbardziej trendujace krypto 
+
+5. mozna kupowac kryto i sprawdzac po ile beda w dalszym czasie np ( trzeba zobaczyc gdzie da sie takie dane przechowywac )
+
+
+
+
+Main Page: 
+
+dodac # NUMERACJA W TABELI  
+
+Tabela z crypto - search crypto (przenosi do strony wyszukanego krypto) page, ilosc na stronie, sort by 
+
+Najpopularnijesze krypto 
+
+Portfel 
+
+zaloguj 
+
+zarejestruj się 
+
+fav crypto 
+
+Coin Page:
+
+wykres z danymi do krypto - 1D, 1W, 1M, 1Y + WYKRESY DO TEGEO I CZY +% CZY -%
+
+kup krypto + jakieś funkcje z portfela 
+
+Portfel:
+
+https://www.binance.com/pl/convert
+
+dane co sie kupilo 
+
+ile ma sie pieniędzy 
+
+jaki jest zysk, jaka jest strata na podstawie kupna
+
+sprzedanie krypto badz wymiana na inne krypto 
+
+Login: firebase 
+
+
+
+
+
+
+
+
+
+

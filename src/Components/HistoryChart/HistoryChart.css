@@ -1,0 +1,38 @@
+.buttons-chart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-chart{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(40, 141, 71) !important;
+    border-radius: 1em !important;
+    width: 7em;
+    margin-left: 1em;
+}
+
+.btn-chart:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: rgb(2, 94, 48) !important;
+      
+}
+
+
+.chart-elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+}
+
+.chart-view{
+    width: 70vh;
+    height: 40vh;
+}

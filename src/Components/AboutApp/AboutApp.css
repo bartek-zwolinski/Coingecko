@@ -1,0 +1,58 @@
+.png {
+    width: 45%;
+    margin-left: 3em;
+}
+
+.container2{
+    height: 100%;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 2em;
+}
+
+.text{
+    margin-left: 2em;
+    width: 20%;
+}
+
+.text h2{
+  margin-bottom: 1.2em;
+  color: rgb(5, 209, 107);
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.text h3{
+   font-size: 1.3em;
+   line-height: 1.5em;
+   margin-bottom: 2em;
+}
+
+.text h3 span{
+    color: rgb(5, 209, 107);
+ }
+
+.link-mp{
+    color: rgb(255, 255, 255) ;
+    text-decoration: none;
+}
+
+.btn-mp{
+    background-color: rgb(40, 141, 71) !important;
+    border-radius: 1em !important;
+    width: 50%;
+}
+
+.link-mp:hover{
+    color: rgb(255, 255, 255) ;
+}
+
+.btn-mp:hover{
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: rgb(2, 94, 48) !important;
+}
