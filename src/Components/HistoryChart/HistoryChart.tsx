@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState, useMemo } from 'react'
 import axios from 'axios'
 import {Chart as ChartJS,CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Filler,Legend,
@@ -39,19 +38,58 @@ const HistoryChart = (props: Props) => {
   [response]);
 
     const options = {
-        responsive: true
-      }
+      plugins:{legend:{display:false}},
+      scales: {
+        y:{
+          ticks:{
+            color:"white",
+            font:{
+              size:15
+            }
+          },
+          grid:{
+           display: false,
+          }
+        },
+        x:{
+          ticks:{
+            color:"white",
+            font:{
+              size:13,
+            },
+          
+          maxRotation: 70,
+          minRotation: 70,
+          },
+          grid:{
+            display: false,
+           },
+           
+        }
+      },
+    };
+  
   
    const data = useMemo(()=> ({
-   labels: coinCharData.map(value => moment(value.x).format('MMM DD')),
+   labels: coinCharData.map(value => moment(value.x).format('MM/DD/YY')),
    datasets: [
      {
        fill: true,
+        label: props.id ,
        data: coinCharData.map(val => val.y),
-        borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+       backgroundColor:"rgb(40, 141, 71)",
+       pointBorderColor:"white",
+       pointBorderWidth:1,
+       pointRadius:1,
+       tension: 0.4,
+
        }
-     ]
+     ],
+     title: {
+      display: true,
+      text: ''
+    },
+  
    }),[coinCharData])
 
   return (

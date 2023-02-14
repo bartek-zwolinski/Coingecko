@@ -12,6 +12,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
+    "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.6",
     "@mui/styled-engine-sc": "^5.11.0",
@@ -26,6 +27,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
+    "react-toastify": "^9.1.1",
     "reactstrap": "^9.1.5",
     "styled-components": "^5.3.6"
   },

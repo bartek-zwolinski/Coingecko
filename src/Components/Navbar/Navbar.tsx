@@ -1,4 +1,3 @@
-
 import {Button } from '@mui/material'
 import {Link} from 'react-router-dom'
 import './Navbar.css'
@@ -19,8 +18,8 @@ const Navbar = () => {
         <Link className='link-nav' to='/profile'> Profile </Link>     
       </div>
       <div className='buttons'>
-        <Button className='btn-nav' > Sign in  </Button>
-        <Button className='btn-nav'> Sign up </Button>
+        <Link className='btn-nav' to='/sign-in'> <Button sx={{color: 'white'}}> Sign In </Button></Link>    
+        <Link className='btn-nav' to='/sign-up'> <Button sx={{color: 'white'}} > Sign Up </Button></Link>
       </div>
     </div>
   )

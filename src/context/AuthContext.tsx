@@ -5,31 +5,23 @@ interface Props {
     children?: ReactNode
 }
 
-
-
-
-
-/// ? 
-
-    type Value = {
-            currentUser: any;
-            signup: (email:string, password:string) => void;
-            login: any;
+type Value = {
+    currentUser: {
+      email: string;
     }
+    signup: (email:string, password:string) => void;
+    login: (email:string, password:string) => void;
+    logout: () => void;
+    resetPassword: (email:string) => void;
+    updatePassword: (password:string) => void;
+    updateEmail: (email:string) => void;
+}
 
-const AuthContext = React.createContext<Value>({currentUser: '', signup:(email, password)=> {}, login: ''}); ///// ??
+const AuthContext = React.createContext<Value>({currentUser: {email: ''}, signup:(email, password)=> {}, login:(email, password)=> {}, logout:()=>{}, resetPassword:(email)=> {}, updatePassword:(password)=> {}, updateEmail:(email)=> {}}); ///// ??
 
 export function useAuth() {
     return useContext(AuthContext);
 }
-
-
-
-
-
-
-
-
 
 export function AuthProvider({children, ...props}: Props) {
 
@@ -44,6 +36,23 @@ export function AuthProvider({children, ...props}: Props) {
     return auth.signInWithEmailAndPassword(email, password)
   }
 
+  function logout() {
+    return auth.signOut()
+  }
+
+  function resetPassword(email:string) {
+    return auth.sendPasswordResetEmail(email)
+  }
+
+  function updateEmail(email:string) {
+    return currentUser.updateEmail(email)
+  }
+
+  function updatePassword(password:string) {
+    return currentUser.updatePassword(password)
+  }
+
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user:any) => {
       setCurrentUser(user)
@@ -56,7 +65,11 @@ export function AuthProvider({children, ...props}: Props) {
 const value = { 
     currentUser,
     login,
-    signup
+    signup,
+    logout,
+    resetPassword,
+    updateEmail,
+    updatePassword
 }
 
   return (

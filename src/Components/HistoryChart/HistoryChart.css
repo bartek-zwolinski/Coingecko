@@ -1,16 +1,17 @@
 .buttons-chart{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 .btn-chart{
     color: rgb(255, 255, 255) !important;
     background-color: rgb(40, 141, 71) !important;
     border-radius: 1em !important;
-    width: 7em;
+    width: 19%;
     margin-left: 1em;
 }
 
@@ -20,6 +21,7 @@
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     background-color: rgb(2, 94, 48) !important;
+
       
 }
 

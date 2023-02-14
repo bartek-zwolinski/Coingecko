@@ -1,10 +1,9 @@
-import React from 'react'
-import { useEffect, useState, useMemo, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { Link, useNavigate } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from '../../../context/AuthContext'
-
+import './SignIn.css'
 
 const LogIn = () => {
 
@@ -13,31 +12,28 @@ const LogIn = () => {
     const { login } = useAuth();
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
-    const history = useNavigate();
+    const nav = useNavigate();
 
     async function handleSubmit(e:any) {
-        
         e.preventDefault();
-
           try {
             setError("")
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            //history.push("/")
+            nav('/profile')
           } catch {
             setError("Failed to log in ")
           }
-      
           setLoading(false)
-
         login(emailRef.current.value, passwordRef.current.value)
     }
 
   return (
-    
       <>
-      <Card>
-        <Card.Body>
+      <div className="container-card">
+      <Button> <Link  className='go-home' to='/about-app'> Home </Link> </Button>
+      <Card className='card'>
+        <Card.Body style={{color: 'black'}} >
           <h2 className="text-center mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
@@ -53,10 +49,14 @@ const LogIn = () => {
               Log In 
             </Button>
           </Form>
+          <div className="w-100 text-center mt-2">
+          <Link  to="/forgot-password">Forgot Password?</Link>
+          </div>        
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? 
+      <h3>Already have an account? Need an account? <Link to='/sign-up'>Sign Up</Link></h3>
+      </div>
       </div>
     </>
 

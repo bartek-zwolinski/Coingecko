@@ -1,0 +1,36 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  
+  .socialMedia svg {
+    color: rgb(231, 220, 220);
+    margin: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: 0em;
+  }
+  
+  .footer p {
+    color: rgb(231, 220, 220);
+    font-size: 0.75em;
+    font-weight: 400;
+  }
+  
+  .footer span{
+    color:rgb(76, 227, 122);
+    font-weight: 600;
+  }
+.footer h3 {
+    color: rgb(231, 220, 220);
+    font-size: 0.8em;
+}
+
+.footer h4 {
+    color: rgb(231, 220, 220);
+    font-size: 0.75em;
+}

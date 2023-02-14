@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import { useEffect, useState, useMemo } from 'react'
-import { NativeSelect, Button, IconButton, Pagination, Stack, Avatar, Table,TableBody,TableCell,TableContainer,TableHead,TableRow,Paper, InputLabel, MenuItem, Select, FormControl, Autocomplete, TextField } from '@mui/material'
-import {Link, useNavigate} from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { IconButton, Pagination, Stack, Avatar, Table,TableBody,TableCell,TableContainer,TableHead,TableRow,Paper, InputLabel, MenuItem, Select, FormControl } from '@mui/material'
+import {Link} from 'react-router-dom'
 import './Table.css'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useLocalStorage } from '../../useLocalStorage/useLocalStorage'
@@ -30,7 +30,6 @@ const Tables = () => {
     setSelectedCoins(localStor);
     }
   },[localStor])
-
   
   useEffect(() =>{
     setUrl(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=${sortBy}&per_page=${perPage}&page=${page}&sparkline=false`)
@@ -42,14 +41,14 @@ const Tables = () => {
       .then((data) => setData(data))
     },[url, setData])
 
-    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-      setPage(value);
-    };
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+   };
 
-    const addCoinToFav = (id:string, name:string, symbol:any, market_cap_change_percentage_24h:number, current_price:number, image:string, total_volume:number) => {
-      let idMap = selectedCoins.map((item)=> item[0])
-      let isSelected = idMap.includes(id)
-      if(isSelected){
+  const addCoinToFav = (id:string, name:string, symbol:any, market_cap_change_percentage_24h:number, current_price:number, image:string, total_volume:number) => {
+    let idMap = selectedCoins.map((item)=> item[0])
+    let isSelected = idMap.includes(id)
+     if(isSelected){
         setSelectedCoins(selectedCoins.filter((item) => item[0]!== id || item[1]!== name || item[2]!== symbol || item[3]!== market_cap_change_percentage_24h || item[4]!== current_price || item[5]!== image || item[6]!== total_volume))
       } else {
         setSelectedCoins([...selectedCoins, [id,name,symbol,market_cap_change_percentage_24h,current_price,image,total_volume]])
@@ -61,7 +60,7 @@ const Tables = () => {
     <div className='container3'>
       <div className='first-part'>
         <div className='first-part-first'>
-          <FormControl sx={{ m: 1, width: '10em'}}>
+          <FormControl size="small" sx={{ m: 1, width: '10em'}}>
         <InputLabel className='text-leb' >Choose currency:</InputLabel>
         <Select className='select' 
            sx={{
@@ -91,9 +90,8 @@ const Tables = () => {
          </Select>
          </FormControl>
         </div>
-
         <div className='first-part-second'>
-        <FormControl>
+        <FormControl size="small">
         <InputLabel className='text-leb' id="demo-simple-select-label">Sort by:</InputLabel>
         <Select className='select'
         sx={{
@@ -131,13 +129,13 @@ const Tables = () => {
         <TableContainer  className='table-container' component={Paper}>
         <Table sx={{ minWidth: 650, }} size='small' aria-label="simple table">
         <TableHead>
-          <TableRow>
-            <TableCell>Asset</TableCell>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Total Volume</TableCell>
-            <TableCell align="right">Price {`(${currency})`}</TableCell>
-            <TableCell align="right">Market Cap Change 24h</TableCell>
-            <TableCell align="right">Add to favourites</TableCell>
+          <TableRow >
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}} >Asset</TableCell>
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}} align="right">Name</TableCell>
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}} align="right">Total Volume</TableCell>
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}} align="right">Price {`(${currency})`}</TableCell>
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}} align="right">Market Cap Change 24h %</TableCell>
+            <TableCell sx={{fontWeight:'600', fontSize:'1em'}}  align="right">Add to favourites</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -148,7 +146,8 @@ const Tables = () => {
               let isSelected = idMap.includes(id) ? true : false 
                 return <TableRow
                  key={id}
-                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                 sx={{ '&:last-child td, &:last-child th': { border: 0 },
+                 ':hover': {background: 'rgb(217, 223, 219)'} }}
                  > 
                 <TableCell  component="th" scope="row"> 
                   <Link className='link' to={`/${id}`}>
@@ -161,19 +160,19 @@ const Tables = () => {
                 <TableCell align="right">{name}</TableCell>
                 <TableCell align="right">{total_volume}</TableCell>
                 <TableCell align="right">{current_price}</TableCell> 
-                <TableCell style={{color: isPositive ? 'green' : 'red'}}
+                <TableCell style={{color: isPositive ? 'green' : 'red', fontWeight: 
+                '500'}}
                  align="right">{market_cap_change_percentage_24h}</TableCell>
                  <TableCell align="right"><IconButton 
                  onClick={e => addCoinToFav(id, name,symbol,market_cap_change_percentage_24h, current_price, image, total_volume)}><FavoriteIcon sx={{ color: isSelected ? 'red' : 'grey'}}/></IconButton></TableCell>
-                </TableRow>
-                
+                </TableRow>  
             })}
         </TableBody>  
         </Table>
         </TableContainer>
         </div>
         <div className='form' >
-        <FormControl sx={{ m: 1, width: '10em'}} >
+        <FormControl size="small" sx={{ m: 1, width: '10em'}} >
           <InputLabel className='text-leb' id="demo-simple-select-label">Coins per Page:</InputLabel>
             <Select  sx={{
               color: "white",
@@ -202,9 +201,10 @@ const Tables = () => {
               <MenuItem value={100}>100</MenuItem>
             </Select>
             </FormControl>
-          <FormControl>
+          <FormControl size="small">
           <Stack spacing={2}>
           <Pagination sx={{
+              button:{color: '#ffffff'},
               color: "white",
               '.MuiSvgIcon-root ': {
                 fill: "rgb(5, 209, 107)!important",
@@ -222,5 +222,4 @@ const Tables = () => {
     </div>
   )
 }
-
 export default Tables

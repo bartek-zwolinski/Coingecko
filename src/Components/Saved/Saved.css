@@ -8,6 +8,10 @@
     width: 70%;
 }
 
+.table-cont1 h4 {
+    color: white
+}
+
 .container5{
     display: flex;
     justify-content: center;
@@ -17,6 +21,7 @@
 
 .table-cont1 h3 {
     color: rgb(5, 209, 107) !important;
+    font-size: 2em !important;
     margin-bottom: 1em;
 }
 

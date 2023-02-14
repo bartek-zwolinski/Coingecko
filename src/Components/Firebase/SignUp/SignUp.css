@@ -1,0 +1,31 @@
+.card {
+   width: 40%;
+   margin-top: 2em;
+}
+
+.container-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.w-100{
+   margin-top: 2em;
+   
+}
+
+.go-home{
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+}
+
+.go-home:hover{
+   color: white
+}
+
+h3 {
+   color: white;
+   font-size: 1em;
+}

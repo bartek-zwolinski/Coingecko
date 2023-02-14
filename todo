@@ -1,23 +1,24 @@
-UI: 
+Baza danych do programu 
 
-Pagination, search for Crypto
+Portfel + jak to ma wyglądać 
 
-jak zrobic zeby navbar byl wszedzie taki sam
+background za containarem do logowania - czy da się zrobić tak żeby nie było widac navbar 
 
+saved coins czy działa 
 
-/// UseNavigate zamiast .href 
-
-
-
+jak jestem zalogowany to nie da sie sing in tylko trzeba sie wylogowac najpierw  - MOZE private Routes zadziałą 
 
 Firebase: 
 
-webpack - .env
+webpack - .env // https://vitejs.dev/guide/env-and-mode.html // confing .json 
 
-AuthContex = Value 
+privateRoute
+ZROBIC ROUTING 
 
-history.push 
 
+authprivider wyzej
+
+protecteg routes 
 
 
 

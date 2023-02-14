@@ -11,12 +11,22 @@
     width: 20em;
 }
 
+.company h3{
+    color: white;
+    font-size: 1.7em;
+}
 .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center ; 
     width: 50em;
+    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to right ,#4f2375, #1b0549);
+    border-radius: 1.5em;
+    height: 8em;
+    position: relative;
+    overflow: auto;
 
 }
 
@@ -60,14 +70,18 @@
     border-radius: 1em !important;
     width: 40%;
     margin-left: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
 .btn-nav:first-child{
     color: rgb(255, 255, 255) !important;
-    
+    text-align: center;
     border-radius: 1em !important;
     width: 40%;
-    
+    text-decoration: none;
+    color: white;
     margin-left: 2em;
 }
 
@@ -88,3 +102,4 @@
     background-color: rgb(2, 94, 48) !important;
       
 }
+
