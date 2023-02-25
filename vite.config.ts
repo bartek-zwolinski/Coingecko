@@ -8,3 +8,5 @@ export default defineConfig({
   },
   plugins: [react()],
 })
+
+// https://stackoverflow.com/questions/66147328/is-there-a-way-to-debug-code-in-vscode-initiated-with-vite

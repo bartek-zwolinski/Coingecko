@@ -47,7 +47,7 @@ const SingUp = () => {
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Password (Password should include 6+ characters)</Form.Label>
               <Form.Control type="password"  ref={passwordRef} required />
             </Form.Group>
             <Form.Group id="password-confirm">

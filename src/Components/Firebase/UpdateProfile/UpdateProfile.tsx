@@ -35,7 +35,8 @@ const UpdateProfile = () => {
             nav("/profile")
           })
           .catch(() => {
-            setError("Failed to update account")
+            setError("Failed to update account - LogOut and LogIn")
+
           })
           .finally(() => {
             setLoading(false)

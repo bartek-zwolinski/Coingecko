@@ -1,0 +1,84 @@
+.container4 h4{
+    color:rgb(5, 209, 107);
+    font-size: 1.5em;
+}
+
+.container4 h4:first-child{
+    margin-top: 2em;
+}
+
+.form-cont{
+    margin-top: 3em !important;
+}
+
+.h3{
+    color: black;
+}
+
+.container3{
+    margin-top: 2em;
+}
+
+
+.btn-sub{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(40, 141, 71) !important;
+    border-radius: 1em !important;
+    margin-top: 1em !important;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+.btn-sub:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: rgb(34, 185, 80) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+h2{
+    color:white;
+    font-size: 2em;
+}
+
+.table-cont{
+    margin-top: 1em;
+}
+
+span{
+    color:rgb(5, 209, 107);
+}
+
+.btn-cl{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(40, 141, 71) !important;
+    border-radius: 1em !important;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.log-out{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    align-items: center;
+}
+
+.log-out h4{
+    color: white;
+}
+
+.log-out-button{
+    margin-left: 1em;
+    background-color:  rgb(34, 185, 80)  !important;
+    text-align: center;
+    text-decoration: none !important;
+    color: white !important;
+    border-radius: 1em !important;
+    font-weight: 600 !important;
+}

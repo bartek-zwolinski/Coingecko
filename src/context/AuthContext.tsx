@@ -8,6 +8,7 @@ interface Props {
 type Value = {
     currentUser: {
       email: string;
+      uid: string;
     }
     signup: (email:string, password:string) => void;
     login: (email:string, password:string) => void;
@@ -17,7 +18,7 @@ type Value = {
     updateEmail: (email:string) => void;
 }
 
-const AuthContext = React.createContext<Value>({currentUser: {email: ''}, signup:(email, password)=> {}, login:(email, password)=> {}, logout:()=>{}, resetPassword:(email)=> {}, updatePassword:(password)=> {}, updateEmail:(email)=> {}}); ///// ??
+const AuthContext = React.createContext<Value>({currentUser: {email: '', uid: ''}, signup:(email, password)=> {}, login:(email, password)=> {}, logout:()=>{}, resetPassword:(email)=> {}, updatePassword:(password)=> {}, updateEmail:(email)=> {}}); ///// ??
 
 export function useAuth() {
     return useContext(AuthContext);

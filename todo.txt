@@ -1,0 +1,13 @@
+
+
+
+
+
+
+Podczas ładowania wyświetla się NaN
+
+
+
+
+
+

@@ -6,7 +6,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import './Saved.css'
 
 const Saved = () => {
-  const [data, setData] = useState<any>([]);
   const [selectedCoins, setSelectedCoins] = useState<any[]>([]);
   const [localStor, setLocaStore] = useLocalStorage('selectedCoins', selectedCoins);
 
@@ -17,10 +16,10 @@ const Saved = () => {
   },[selectedCoins])
 
   useEffect(() =>{
-    if (localStor !== null && selectedCoins.length === 0 && data.length ===0 ){
+    if (localStor !== null && selectedCoins.length === 0 ){
     setSelectedCoins(localStor);
     }
-  },[localStor])
+  },[setSelectedCoins])
 
   const addCoinToFav = (id:string, name:string, symbol:any, market_cap_change_percentage_24h:number, current_price:number, image:string, total_volume:number) => {
     let idMap = selectedCoins.map((item)=> item[0])
