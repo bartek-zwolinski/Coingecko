@@ -1,4 +1,3 @@
-import React from 'react'
 import { Image} from "react-bootstrap"
 import './AboutApp.css'
 import {Button } from '@mui/material'
@@ -17,5 +16,6 @@ const AboutApp = () => {
     </div>
   )
 }
+
 
 export default AboutApp
