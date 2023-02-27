@@ -47,4 +47,4 @@ npm run dev
 
 bartek.zwolinski99@gmail.com
 
-My Linkedin: (https://www.linkedin.com/in/bartłomiej-zwoliński-9755aa216/)]
+My Linkedin: (www.linkedin.com/in/bartlomiej-zwolinski)]
