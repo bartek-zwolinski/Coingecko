@@ -1,4 +1,4 @@
-<h1>CoinGecko - Cryptocurrency trading Application</h1>
+<h1>CryptoGeek - Cryptocurrency trading Application</h1>
 
 ## Project Overview 🎨
 
