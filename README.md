@@ -10,7 +10,6 @@ Soon on Netlify
 
 ## Tech/framework used 🧰
 
-Tech | Description 
 
 * [React](https://reactjs.org/) | Library for building user interfaces.
 * [TypeScript](https://www.typescriptlang.org/) | TypeScript is JavaScript with syntax for types.
